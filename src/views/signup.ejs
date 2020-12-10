@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<title><%=title%></title>
+		<meta name="generator" content="Bootply" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    
+		<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
+		<!--[if lt IE 9]>
+			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+    <link href="/css/styles.css" rel="stylesheet">
+   
+	</head> 
+	<body>
+<header class="navbar navbar-bright navbar-fixed-top" role="banner">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="/" class="navbar-brand">Home</a>
+    </div>
+  </div>
+</header>
+<hr>
+<!-- form start -->
+<!--sign in form  -->
+<div class="signup">
+    <h3> library online</h3>
+      <h6>Login Read & Grow</h6>
+      <br>
+    <form  onsubmit="return registerValidate()" action="/signin" method="GET">
+        <div class="form-group">
+            <!-- <label>Full Name:</label>  -->
+            <input type="text" name="fullname" placeholder="Enter your name.." class="form-control" id="fullname" autofocus required>
+            <span id="name-error" class="text-danger font-weight-bold"></span>
+        </div>
+        <div class="form-group">
+            <!-- <label>Email ID:</label>  -->
+            <input type="email" name="email" placeholder="Enter your email ID.." class="form-control" id="email" required>
+            <span id="email-error" class="text-danger font-weight-bold"></span>   
+        </div>
+        <div class="form-group" >
+            <!-- <label>Phone Number:</label>  -->
+            <input type="text" name="phno" placeholder="Enter your Phone No.." class="form-control" id="phno" title="Please enter the phone number in any of the format: XXX-XXX-XXXX, XXX.XXX.XXXX, XXX XXX XXXX" required >
+            <span id="phno-error" class="text-danger font-weight-bold"></span>
+        </div>
+        <!-- Password Validations -->
+        <div class="form-group field">
+            <!-- <label>Password:</label>  -->
+            <input type="password" name="password" placeholder="Enter your password.." class="form-control" id="password" onkeyup="trigger()" title="Minimum 8 characters, at least one uppercase, and one lower case, must contain at least one number" required >    
+            <span id="password-error" class="text-danger font-weight-bold"></span> 
+            
+        </div>
+        <div class="indicator">
+            <span class="weak"></span>
+            <span class="medium"></span>
+            <span class="strong"></span>
+          </div>
+        <div class="text"></div><br>
+         <!-- /Password  Strength Validations -->
+         <div class="form-group">
+            <!-- <label>Confirm Password:</label>  -->
+            <input type="password" name="password-confirm" placeholder="Confirm your password.." class="form-control" id="password-confirm" required> 
+            <span id="cpassword-error" class="text-danger font-weight-bold"></span> 
+        </div>
+        <label>By clicking Sign Up, you agree to our Terms, Data Policy and Cookie Policy. You may receive SMS notifications from us and can opt out at any time.</label>
+         <input type="submit" value="SIGN-UP" class="btn btn-primary" style="margin-left: 2px;width:70%;" onclick="return registerValidate()" >         
+         <br>
+         </form>
+         <br>
+         <div class="acnd">
+           <h5>Already have an account ?</h5>
+         </div>
+        <div class="logbtn" style="margin-left: 2px;width:70% ;"  >
+        <a href="/signin">LOG-IN</a>
+       </div><br/> 
+</div>
+    <!-- signup form -->
+<!-- form end -->
+<div class="container" id="footer">
+  <div class="row">
+      <div class=imgg>
+    <img src="images/mac.png" alt="beauty image" class="pic">
+      </div>
+    <div class="col col-sm-12">
+      
+      <h1>Follow Us</h1>
+      <div class="btn-group">
+       <a class="btn btn-twitter btn-lg" href="#"><i class="icon-twitter icon-large"></i> Twitter</a>
+	   <a class="btn btn-facebook btn-lg" href="#"><i class="icon-facebook icon-large"></i> Facebook</a>
+	   <a class="btn btn-google-plus btn-lg" href="#"><i class="icon-google-plus icon-large"></i> Google+</a>
+      </div>
+      </div>
+    </div>
+
+</div>
+
+<hr>
+
+<hr>
+
+<footer>
+  <div class="container">
+    <div class="row">
+       
+      <div class="col-sm-6">
+        <ul class="list-inline">
+          <li><i class="icon-facebook icon-2x"></i></li>
+          <li><i class="icon-twitter icon-2x"></i></li>
+          <li><i class="icon-google-plus icon-2x"></i></li>
+          <li><i class="icon-pinterest icon-2x"></i></li>
+        </ul>
+        
+      </div>
+      <div class="col-sm-6">
+          <p class="pull-right">Built with <i class="icon-heart-empty"></i> at <a href="http://www.bootply.com">Bootply</a></p>      
+      </div>
+    </div>
+  </div>
+</footer>
+  <!-- script references -->
+  <script src="js/validate.js"></script> 
+  <script src="js/passwordstrength.js"></script> 
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+	</body>
+</html>
